@@ -1,0 +1,10 @@
+# Fichiers système et personnels à ignorer
+../.*
+*.save
+*.history
+*.log
+docker/
+docs/
+site_vitrine_docker/
+exercice-git/
+
