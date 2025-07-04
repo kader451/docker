@@ -2,21 +2,19 @@ version: '3.8'
 
 services:
   backend:
-    build: ./backend 
+    build: ./backend
 
   frontend:
-    build: ./frontend 
-    
+    build: ./frontend
     ports:
       - "8282:80"
     volumes:
       - ./app:/usr/local/apache2/htdocs/
 
-    phpmyadmin:
+  phpmyadmin:
     image: phpmyadmin/phpmyadmin
-
     ports:
       - "8080:80"
     environment:
-      - PNA_HOST: db
-        PNA_PORT: 3306
+      - PMA_HOST=db
+      - PMA_PORT=3306
