@@ -1,6 +1,6 @@
 FROM nginx:stable-perl
 
-COPY app.sh
+COPY app.sh /app.sh
 
 RUN chmod +x /app.sh
 
